@@ -1,0 +1,46 @@
+body {
+    background-image: linear-gradient(to right,rgba(43, 97, 214, 0.5),rgba(124, 113, 113, 0.5));
+
+}
+.content-wrapper{
+    margin: auto;
+    margin-top: 60px;
+    height: 500px;
+    width: 80%;
+    background: white;
+    text-align: center;
+    padding: 50px;
+}
+.img-section{
+    padding: 40px;
+    padding-top: 10px;
+}
+.upload-section{
+    height: 250px;
+    border: 1px dashed rgb(10, 102, 189);
+    border-radius: 30px;
+    margin: auto;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+#exampleFormControlFile1{
+    display: none;
+}
+.detail-section{
+    text-align: justify;
+}
+ul{
+    /* list-style: none;
+    padding: 0px; */
+    padding: 0;
+    list-style-type: none;
+    font-size: large;
+}
+
+.upload-section img{
+    height: 250px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 4px;
+}
