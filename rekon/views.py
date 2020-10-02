@@ -14,7 +14,6 @@ class GetImage(CreateView):
     form_class = ImageForm
 
     def get_context_data(self, **kwargs):
-        print("---------------->>>>>>>>>>")
         context = super(GetImage, self).get_context_data(**kwargs)
         context['pic'] = Image.objects.latest('id')
         get_url = "{}{}".format(settings.MEDIA_URL,Image.objects.latest('id').image)
@@ -33,11 +32,8 @@ class GetImage(CreateView):
         context['mouthclose'] = get_response.get('mouthclose')
         return context
 
-
-
 def imgrekon(img_url):
     import boto3
-
     import json
 
     # Change photo to the path and filename of your image.
@@ -61,8 +57,8 @@ def imgrekon(img_url):
 
         # print(faces['AgeRange'].get('Low'))
         # print(faces['AgeRange'].get('High'))
+        # print(faces['Emotions'][0].get('Type'))
 
-        print(faces['Emotions'][0].get('Type'))
         if faces['Smile'].get('Value'):
             parsed_data['smile'] = "smile"
         if faces['Eyeglasses'].get('Value'):
@@ -78,7 +74,3 @@ def imgrekon(img_url):
         if faces['MouthOpen'].get('Value') is False:
             parsed_data['mouthclose'] = "Mouth close"
         return (parsed_data)
-
-
-
-

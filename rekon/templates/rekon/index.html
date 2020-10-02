@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
 </head>
 <body onload="setup()">
-{#<body>#}
-    {{ pic.image.url }}
+
+
     <div class="content-wrapper">
         <h3> Image Rekognizer </h3>
         <hr>
@@ -80,11 +80,9 @@
                     console.log(URL.createObjectURL(event.target.files[0]))
                     document.getElementById('formid').submit();
                 }
-
         }
      </script>
-{#    <script>#}
-{#    </script>#}
+
 </body>
 
 </html>
