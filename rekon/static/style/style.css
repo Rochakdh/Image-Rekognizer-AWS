@@ -5,7 +5,8 @@ body {
 .content-wrapper{
     margin: auto;
     margin-top: 60px;
-    height: 500px;
+    margin-bottom: 60px;
+    height: auto;
     width: 80%;
     background: white;
     text-align: center;
